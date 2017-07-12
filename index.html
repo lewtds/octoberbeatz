@@ -2,9 +2,176 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+
 	<title>Document</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,400i,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+
+	<style>
+		html {
+			font-family: 'Lato', sans-serif;
+		}
+
+		::selection { background: #8A7893; }
+
+		.container {
+			max-width: 1280px;
+			margin: 0 auto;
+		}
+
+		.hero {
+			background: black url(img/herobg.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			height: 100vh;
+			color: white;
+			box-sizing: border-box;
+		}
+
+		.hero .container {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+		}
+
+		.hero .present {
+			text-align: center;
+			margin-top: 10em;
+		}
+
+		.hero .punch {
+			text-align: center;
+			margin-bottom: 10em;
+		}
+
+		.hero .extra {
+			position: relative;
+		}
+
+		.hero .extra .media {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+
+		.hero .extra .buy-ticket {
+			position: absolute;
+			bottom: 0;
+			width: 300px;
+			left: 50%;
+			margin-left: -150px;
+		}
+
+		.hero .extra .where-when {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+
+		.hero .pure-button {
+			font-size: 120%;
+			color: white;
+			background: none;
+			border: 4px solid white;
+			border-radius: 0;
+			font-weight: 700;
+			letter-spacing: 0.6em;
+			padding: 1em 0;
+			text-align: center;
+		}
+
+		.punch .cube span {
+			position: relative;
+		}
+
+		.punch .cube span:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 100%;
+			margin-right: 0.5em;
+			width: 2em;
+			border-bottom: 3px solid white;
+		}
+
+		.punch .cube span:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 100%;
+			margin-left: 0.5em;
+			width: 2em;
+			border-bottom: 3px solid white;
+		}
+
+		nav {
+			position: fixed;
+			color: white;
+			text-align: center;
+			width: 100%;
+			padding: 1em 0;
+			font-weight: 300;
+			letter-spacing: 0.6em;
+			line-height: 2em;
+		}
+
+		nav > div {
+			display: inline-block;
+			padding-right: 1em;
+			padding-left: 1em;
+			border-right: 3px solid white;
+		}
+
+		nav > div:last-child {
+			border: none;
+		}
+	</style>
 </head>
 <body>
-	Hello, world!
+	<nav>
+		<div>STORY</div>
+		<div>SMOKEBOMB</div>
+		<div>LOGO</div>
+		<div>GALLERY</div>
+		<div>CONTACT</div>
+	</nav>
+
+	<section class="hero">
+		<div class="container">
+			<div class="present">
+				<div style="font-weight: 700; font-size: 200%;">MUSIC FOR FRIENDS</div>
+				<div style="font-weight: 100; font-size: 200%;">presents</div>
+			</div>
+
+			<div class="punch">
+				<div style="font-weight: 700; font-size: 500%;">OCTOBER #BEAT 2017</div>
+				<div class="cube" style="
+				font-family: Georgia, serif;
+				font-size: 350%;
+				letter-spacing: 0.15em;">
+				<span>RUBIK'S CUBE</span></div>
+			</div>
+
+			<div class="extra">
+				<div class="media">
+					<a href=""><img src="img/facebook@2x.png" alt=""></a>
+					<a href=""><img src="img/youtube@2x.png" alt=""></a>
+					<a href=""><img src="img/insta@2x.png" alt=""></a>
+				</div>
+
+					<a href="" class="buy-ticket pure-button">BUY TICKETS</a>
+				
+				<div class="where-when"
+					style="text-align: right; font-size: 150%;">
+					<div style="font-weight: 700;">GLORIA STAGE</div>
+					<div style="font-style: italic;">Pieni Roobertinkatu 12, Helsinki</div>
+					<div style="font-weight: 700;">October 7th, 2017</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </body>
 </html>

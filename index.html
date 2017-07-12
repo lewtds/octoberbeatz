@@ -92,24 +92,25 @@
 			position: relative;
 		}
 
-		.punch .cube span:before {
-			content: '';
-			position: absolute;
-			top: 50%;
-			right: 100%;
-			margin-right: 0.5em;
-			width: 2em;
-			border-bottom: 3px solid white;
-		}
-
+		.punch .cube span:before,
 		.punch .cube span:after {
 			content: '';
 			position: absolute;
+			width: 1.5em;
+			border-bottom: 3px solid white;
+		}
+
+
+		.punch .cube span:before {
+			top: 50%;
+			right: 100%;
+			margin-right: 0.5em;
+		}
+
+		.punch .cube span:after {
 			top: 50%;
 			left: 100%;
 			margin-left: 0.5em;
-			width: 2em;
-			border-bottom: 3px solid white;
 		}
 
 		nav {
@@ -158,10 +159,10 @@
 			</div>
 
 			<div class="punch">
-				<div style="font-weight: 700; font-size: 400%;">OCTOBER #BEATZ 2017</div>
+				<div style="font-weight: 700; font-size: 400%; letter-spacing: 0.05em;">OCTOBER #BEATZ 2017</div>
 				<div class="cube" style="
 				font-family: Georgia, serif;
-				font-size: 250%;
+				font-size: 300%;
 				letter-spacing: 0.15em;">
 				<span>RUBIK'S CUBE</span></div>
 			</div>

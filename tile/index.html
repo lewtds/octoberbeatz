@@ -47,8 +47,11 @@
 
 		body {
 			background-color: #222;
-			background-image: url('img/hero.png');
+			background: 
+				url('img/stage.jpg');
+			background-position: center;
 			background-attachment: fixed;
+			background-size: cover;
 		}
 
 		main {
@@ -72,31 +75,32 @@
 			background-color: white;
 			height: 100%;
 
-			box-shadow: 3px 4px 38px -6px rgba(0,0,0,0.75);
+			box-shadow: 3px 4px 20px -6px rgba(0,0,0,0.75);
 		}
 
 		main .about.block {
 			font-size: 20px;
 			background: 
 				linear-gradient(
-				  rgba(255, 88, 0, 0.85), 
-				  rgba(255, 88, 0, 0.85)
+				   rgba(244, 238, 225, 0.9),
+				   rgba(244, 238, 225, 0.9)
 				),
 				url('img/rubiks-cube-coloured.png');
 			background-position: center;
 			background-repeat: no-repeat;
-			color: white;
+			/*color: white;*/
 		}
 
 		main .ticket.block {
-			background-color: #009E60;
-			color: white;
+			background-color: #f4eee1;
+			/*color: white;*/
 			padding-top: 0;
 			padding-bottom: 0;
 		}
 
 		main .featured.block {
-			background-image: url('img/stage.jpg');
+			background-image: url('img/red-ink.jpg');
+			background-size: cover;
 			background-position: center;
 
 			font-size: 36px;
@@ -109,18 +113,18 @@
 		}
 
 		main .featured.block:hover > .overlay {
-			opacity: 0.9;
+			opacity: 0.6;
 		}
 
 		main .featured.block > .overlay {
 			content: ' ';
-			background-color: #C41E3A;
+			background-color: #000;
 			position: absolute;
 			top: 0;
 			bottom: 0;
 			left: 0;
 			right: 0;
-			opacity: 0.7;
+			opacity: 0.3;
 			z-index: 4;
 			transition: 0.2s ease-in-out;
 		}
@@ -131,14 +135,14 @@
 		}
 
 		main .faq.block {
-			background-color: #F4C430;
+			background-color: #f4eee1;
 			opacity: 0.9;
 			height: calc(100% - 20px);
 		}
 
 		main .social.block {
-			background-color: #0051BA;
-			color: white;
+			background-color: #f4eee1;
+			/*color: white;*/
 			height: auto;
 		}
 
@@ -150,17 +154,18 @@
 			padding: 0;
 			background: none;
 			color: white;
-			box-shadow: none;
+			/*box-shadow: none;*/
 		}
 
 		.sponsors {
-			background-color: white;
+			background-color: rgba(244, 238, 225, 1);
 			text-align: center;
 			font-size: 24px;
 			margin-bottom: 2em;
 			padding: 1em 0;
 			width: 100%;
 			opacity: 0.9;
+			box-shadow: 3px 4px 20px -6px rgba(0,0,0,0.75);
 		}
 
 		.fbcontainer {
@@ -168,6 +173,7 @@
 			margin-right: 10px;
 			background-color: white;
 			height: 400px;
+			box-shadow: 3px 4px 20px -6px rgba(0,0,0,0.75);
 		}
 
 		.logos > img {
@@ -297,7 +303,8 @@
 										At the door: <strong>15 €</strong>
 									</div>
 
-									<a href="" class="pure-button ticket-button">Reserve Ticket</a>
+									<a href="" class="pure-button
+									pure-button-primary ticket-button">Reserve Ticket</a>
 								</div>
 							</div>
 

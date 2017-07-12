@@ -14,6 +14,7 @@
 		}
 
 		::selection { background: #8A7893; }
+		::-moz-selection { background: #8A7893; }
 
 		.container {
 			max-width: 1280px;
@@ -21,7 +22,7 @@
 		}
 
 		.hero {
-			background: black url(img/herobg.jpg);
+			background: #080020 url(img/herobg.jpg);
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: center;
@@ -55,6 +56,10 @@
 			position: absolute;
 			left: 0;
 			bottom: 0;
+		}
+
+		.hero .extra .media img {
+			margin-right: 2em;
 		}
 
 		.hero .extra .buy-ticket {
@@ -116,17 +121,23 @@
 			font-weight: 300;
 			letter-spacing: 0.6em;
 			line-height: 2em;
+			padding-top: 2em;
 		}
 
 		nav > div {
 			display: inline-block;
 			padding-right: 1em;
 			padding-left: 1em;
-			border-right: 3px solid white;
+			/*border-right: 3px solid white;*/
 		}
 
 		nav > div:last-child {
 			border: none;
+		}
+
+		nav .logo {
+			height: 70px;
+			vertical-align: middle;
 		}
 	</style>
 </head>
@@ -134,7 +145,7 @@
 	<nav>
 		<div>STORY</div>
 		<div>SMOKEBOMB</div>
-		<div>LOGO</div>
+		<div><img src="img/cube.png" alt="" class="logo"></div>
 		<div>GALLERY</div>
 		<div>CONTACT</div>
 	</nav>
@@ -157,9 +168,9 @@
 
 			<div class="extra">
 				<div class="media">
-					<a href=""><img src="img/facebook@2x.png" alt=""></a>
-					<a href=""><img src="img/youtube@2x.png" alt=""></a>
-					<a href=""><img src="img/insta@2x.png" alt=""></a>
+					<a href=""><img src="img/facebook.png" alt=""></a>
+					<a href=""><img src="img/youtube.png" alt=""></a>
+					<a href=""><img src="img/insta.png" alt=""></a>
 				</div>
 
 					<a href="" class="buy-ticket pure-button">BUY TICKETS</a>

@@ -8,15 +8,15 @@
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>October #Beatz 2016 &lsaquo; Log In</title>
-	<link rel='dns-prefetch' href='//s.w.org' />
-<link rel='stylesheet' href='http://octoberbeatz.com/wp-admin/load-styles.php?c=0&amp;dir=ltr&amp;load%5B%5D=dashicons,buttons,forms,l10n,login&amp;ver=4.6.1' type='text/css' media='all' />
+	<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel='stylesheet' href='wp-admin/load-styles.php?c=0&amp;dir=ltr&amp;load%255B%255D=dashicons,buttons,forms,l10n,login&amp;ver=4.6.1' type='text/css' media='all' />
 <meta name='robots' content='noindex,follow' />
 	</head>
 	<body class="login login-action-login wp-core-ui  locale-en-us">
 		<div id="login">
 		<h1><a href="https://wordpress.org/" title="Powered by WordPress" tabindex="-1">October #Beatz 2016</a></h1>
 	
-<form name="loginform" id="loginform" action="http://octoberbeatz.com/wp-login.php" method="post">
+<form name="loginform" id="loginform" action="wp-login.php" method="post">
 	<p>
 		<label for="user_login">Username or Email<br />
 		<input type="text" name="log" id="user_login" class="input" value="" size="20" /></label>
@@ -34,7 +34,7 @@
 </form>
 
 <p id="nav">
-	<a href="http://octoberbeatz.com/wp-login.php?action=lostpassword">Lost your password?</a>
+	<a href="wp-login.php?action=lostpassword">Lost your password?</a>
 </p>
 
 <script type="text/javascript">
@@ -51,7 +51,7 @@ wp_attempt_focus();
 if(typeof wpOnload=='function')wpOnload();
 </script>
 
-	<p id="backtoblog"><a href="http://octoberbeatz.com/">&larr; Back to October #Beatz 2016</a></p>
+	<p id="backtoblog"><a href="index.html">&larr; Back to October #Beatz 2016</a></p>
 	
 	</div>
 

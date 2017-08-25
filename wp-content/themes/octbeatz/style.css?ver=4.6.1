@@ -1,0 +1,1670 @@
+/*
+Theme Name: OctBeatz
+Theme URI: http://underscores.me/
+Author: Shelune
+Author URI: http:/shelune.com
+Description: Custom theme from Underscore?
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: octbeatz
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+OctBeatz is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Asides
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	padding: 10px 10px;
+	border: solid 1px #ddd;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+	max-width: 100%;
+}
+
+.widget-title {
+	padding-bottom: 10px;
+	border-bottom: solid 1px #ddd;
+	margin-top: 10px;
+	font-family: 'Lato', sans-serif;
+}
+
+.widget ul {
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+}
+
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Asides
+--------------------------------------------------------------*/
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+	display: none;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.comment-content {
+	margin: 10px 0;
+	padding: 8px;
+	background: #ddd;
+}
+
+.comment-content p {
+	margin: 0;
+}
+
+.comment-list {
+	list-style: none;
+	margin-top: 40px;
+}
+
+.comment-meta {
+	color: inherit;
+}
+
+.comment-meta a {
+	color: inherit;
+}
+
+.comment-metadata {
+	margin-top: 10px;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+.comment-respond {
+	margin-top: 80px;
+}
+
+.comment-reply-title, .comments-title {
+	font-family: 'Lato', sans-serif;
+}
+
+.comment-reply-title {
+	text-align: center;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #ddd;
+}
+
+.logged-in-as a {
+	color: inherit;
+}
+
+.comment-form-comment {
+	display: flex;
+	flex-flow: column;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.media-content .gallery {
+	margin: 20px 0;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    text-rendering: optimizeLegibility;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -webkit-box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+ 	box-sizing: border-box;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+ }
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles _ CORESTYLE
+   ========================================================================== */
+
+body {
+	/* -webkit-transition: all cubic-bezier(0.2, 0.3, 0.25, 0.9) 0.3s;
+    transition: all cubic-bezier(0.2, 0.3, 0.25, 0.9) 0.3s; */
+    /* for global transition but turned off for now */
+    font-family: 'Lato', sans-serif;
+	overflow: auto;
+}
+
+.site > section:not(:first-of-type) {
+    margin-top: 80px;
+	margin-bottom: 40px;
+}
+
+.navbar {
+	background: rgba(61, 61, 61, 0.6);
+	border-bottom: none;
+	height: 80px;
+}
+
+.navbar-inverse .navbar-toggle {
+	border-radius: 0;
+	border-color: #fafafa;
+	height: 40px;
+	margin: 20px 15px;
+}
+
+.navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-nav > li > a {
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #fafafa;
+	padding: 0;
+	margin: 0 15px;
+	line-height: 80px;
+	outline: none;
+}
+
+.navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
+	color: #9e9e9e;
+}
+
+.navbar-brand.navbar-brand {
+	font-family: 'Advent Pro', sans-serif;
+	line-height: 80px;
+	padding: 0;
+	color: #fafafa;
+	font-weight: 700;
+	font-size: 24px;
+	outline: none;
+}
+
+
+/* INDEX PAGE __ IDXPG */
+
+.section-title {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 30px;
+	margin-bottom: 40px;
+	font-weight: 700;
+}
+
+/* Jumbotron Section __ JMBSCT*/
+
+.jumbotron {
+	background-position: 50%;
+	background-size: cover;
+	justify-content: center;
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+}
+
+.jumbotron__header p {
+    display: inline-block;
+    padding: 0.5em;
+}
+
+.jumbotron .hero__intro {
+	font-size: 80px;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 1px;
+	margin-top: 10px;
+}
+
+.jumbotron .hero__intro:last-of-type {
+	margin-bottom: 40px;
+	
+	font-weight: 100;
+}
+
+.hero__ticket {
+	font-size: 24px;
+	text-transform: uppercase;
+	padding: 8px 16px;
+	border: solid 2px #fafafa;
+	max-width: 240px;
+	margin: 0 auto;
+	transition: all 0.25s ease;
+}
+
+.hero__ticket:hover {
+	color: #fafafa;
+	border-color: #fafafa;
+	background-color: rgba(61, 61, 61, 0.5);
+}
+
+.hero__links {
+	align-self: flex-end;
+	width: 100%;
+	text-align: center;
+	color: #fafafa;
+}
+
+.hero__links > a {
+	display: block;
+	color: inherit;
+	outline: none;
+}
+
+.hero__links > a:hover {
+	text-decoration: none;
+}
+
+.hero__footer {
+	width: 100%;
+	padding: 20px 0;
+	align-self: flex-end;
+	color: #fafafa;
+	text-transform: uppercase;
+	text-align: center;
+	background: rgba(46, 30, 8, 0.3);
+	display: flex;
+	align-items: center;
+}
+
+.hero__footer .footer_btn {
+	color: #fafafa;
+	text-decoration: none;
+	width: 240px;
+	border: 3px solid #fafafa;
+	padding: 8px 16px;
+	display: inline-block;
+	text-align: center;
+}
+
+.hero__footer .footer_info > p:first-child {
+	font-family: 'Advent Pro', sans-serif;
+	font-weight: 700;
+	font-size: 24px;
+	padding-bottom: 20px;
+	position: relative;
+	display: inline-block;
+}
+
+.hero__footer .footer_info > p:first-child::after {
+	position: absolute;
+	width: 80%;
+	height: 3px;
+	content: '';
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 0;
+	background: #fafafa;
+}
+
+.hero__footer .footer_info > p:nth-child(2) {
+	margin-bottom: 5px;
+}
+
+/* Introduction Section __ INTSCT */
+
+.home__intro hr {
+	width: 95%;
+}
+
+.intro__heading {
+    margin: 40px 0;
+	font-size: 48px;
+}
+
+.intro__image {
+	padding: 0;
+}
+
+.intro__container {
+	margin: 40px 0;
+	line-height: 1.6;
+}
+
+.intro__container:nth-of-type(2) {
+	text-align: right;
+}
+
+.intro__container:first-of-type > .intro__content {
+	margin-right: 40px;
+}
+
+.intro__container:nth-of-type(2) > .intro__content {
+	margin-left: 40px;
+}
+
+.intro__content {
+	padding-left: 0;
+}
+
+.intro__content > .heading {
+	margin-top: 0;
+}
+
+.viewport--hidden-left {
+	opacity: 0;
+	transform: translateX(50px);
+}
+
+.viewport--hidden-right {
+	opacity: 0;
+	transform: translateX(-50px);
+}
+
+.viewport--show {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+/* Performer Section __ PFMSCT */
+
+.home__performer .col-sm-12 {
+	padding-left: 0;
+  	margin-top: 40px;
+}
+
+.gallery > figure {
+    margin: 4px;
+}
+
+.home__performer {
+	background: #000;
+	color: #fafafa;
+}
+
+.performer--new {
+	margin-bottom: 40px;
+}
+
+/* Transition __ TRANS */
+
+.transition-featured {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 360px;
+	display: flex;
+	align-items: center;
+	font-weight: 700;
+}
+
+.transition__content p {
+	font-size: 40px;
+	color: #fafafa;
+	text-align: center;
+	font-weight: 700;
+}
+
+/* Sponsor __ SPNSCT */
+
+.sponsors {
+	margin: 40px 0;
+}
+
+.sponsors > div {
+	margin: 0 20px;
+	height: 200px;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 20%;
+}
+
+.sponsors + h4 {
+	margin-bottom: 40px;
+}
+
+.sponsors__desc {
+	text-align: center;
+	font-size: 16px;
+	color: #9e9e9e;
+}
+
+/* Media __ MEDSCT */
+
+.media__links {
+	list-style: none;
+	text-align: center;
+	margin-bottom: 30px;
+	padding-left: 0;
+}
+
+.media__links > li {
+	display: inline-block;
+	margin: 0 10%;
+}
+
+.media__links > li > a {
+	color: #3d3d3d;
+	font-size: 24px;
+	font-weight: 700;
+	text-transform: capitalize;
+}
+
+.media__links > li > a:hover {
+	//text-decoration: none;	
+}
+
+/* Ticket Section __ TCKSCT */
+
+.home__tickets .section-title {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.home__tickets .row {
+	display: flex;
+	justify-content: center;
+}
+
+.ticket {
+	margin-right: 40px;
+	width: 360px;
+	height: 360px;
+	background: #1d1d1d;
+	text-align: center;
+	padding: 20px;
+}
+
+.ticket__content {
+	background: #fff;
+	height: 100%;
+	color: #fafafa;
+	border: 1px solid #fafafa;
+}
+
+.ticket__features {
+	margin-bottom: 20px;
+}
+
+.ticket__type {
+	margin: 0;
+	padding: 20px;
+	background: #3d3d3d;
+	color: #fafafa;
+	font-family: 'Advent Pro', sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 36px;
+}
+
+.ticket--test small {
+	display: block;
+	letter-spacing: 0.75px;
+}
+
+.ticket__price {
+	font-size: 80px;
+	position: relative;
+	display: inline-block;
+	margin-bottom: 0;
+	margin-top: 40px;
+	color: #3d3d3d;
+}
+
+.ticket__price::before {
+	position: absolute;
+	content: '€';
+	top: 10px;
+	left: -10px;
+	font-size: 20px;
+}
+
+.ticket__features {
+	padding-left: 0;
+	list-style: none;
+}
+
+.ticket__features span {
+	position: relative;
+}
+
+.ticket__features span::before {
+	position: absolute;
+	content: '';
+	width: 4px;
+  	height: 10px;
+  	border: solid #fff;
+  	border-width: 0 2px 2px 0;
+  	transform: rotate(45deg) translateY(-50%);
+	left: -15px;
+	top: calc(50% - 2px);
+}
+
+.ticket small {
+	display: block;
+	letter-spacing: 0.75px;
+}
+
+.ticket__link {
+	padding: 8px 16px;
+	display: inline-block;
+	white-space: nowrap;
+	background: #3d3d3d;
+	color: #fafafa;
+	width: 50%;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 0.75px;
+	transition: all 0.25s ease;
+	position: absolute;
+	bottom: 40px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.ticket__link:hover {
+	text-decoration: none;
+	color: #3d3d3d;
+	background: rgba(61, 61, 61, 0.5);
+}
+
+
+/* Footer Section __ FTSCT */
+
+.main-footer {
+    background: #101010;
+    padding: 20px;
+}
+
+.footer__nav ul {
+    margin-top: 10px;
+}
+
+.footer__nav li {
+    margin: 0 12px;
+    font-size: 16px;
+}
+
+.social-links {
+	padding-left: 0;
+	list-style: none;
+}
+
+.social-links a {
+	color: #fafafa;
+}
+
+/* NEWS PAGE __ NWSPG*/
+
+.featured {
+	background: url("assets/img/jumbotron.jpg") center no-repeat;
+    background-size: cover;
+    display: table;
+    width: 100%;
+}
+
+.featured h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 48px;
+    display: flex;
+    line-height: 120px;
+    justify-content: center;
+}
+
+.news-post {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    padding-bottom: 40px;
+}
+
+.side-content {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.news-title {
+    margin: 0;
+    font-size: 24px;
+}
+
+.news-image {
+	margin-top: 20px;
+}
+
+.news-image img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.news-metadata {
+    margin-top: 20px;
+}
+
+.news-metadata i {
+    margin-right: 8px;
+}
+
+.news-metadata span {
+	margin-right: 8px;
+}
+
+.search-form {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.search-form label {
+	flex-basis: 100%;
+}
+
+.search-form input[type="search"] {
+	width: 100%;
+}
+
+.search-form .search-submit {
+	flex-basis: 100%;
+}
+
+.search-form input {
+	padding: 8px;
+	outline: none;
+	border: 1px solid #ddd;
+}
+
+.btn--default {
+    border-radius: 0;
+    background: transparent;
+    color: #000;
+    border-color: #000;
+    transition: 0.25s ease all;
+}
+
+.btn--default:hover {
+    background: #000;
+    color: #fafafa;
+    border-color: darkgray;
+}
+
+.input--email {
+    margin: 8px 0;
+}
+
+.btn--full {
+    width: 100%;
+}
+
+/* NEWS POST PAGE __ PSTPG*/
+
+.post .news-metadata {
+    margin-top: 20px;
+}
+
+article.news-post {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.post-info {
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.post-header img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.comments-area {
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.leave-comment > h3 {
+    margin-top: 80px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.leave-comment label {
+    display: block;
+}
+
+.leave-comment input, .leave-comment textarea {
+    width: 100%;
+}
+
+.leave-comment .btn--submit {
+    padding: 12px;
+    margin-top: 10px;
+}
+
+/* PERFORMERS PAGE __ PFMPG*/
+
+.performers-overview h1, .performers-details h1 {
+    margin-bottom: 40px;
+}
+
+.performer {
+    margin-bottom: 40px;
+}
+
+.performer figure {
+    margin-bottom: 10px;
+}
+
+.performer h4 {
+    margin: 5px 0;
+}
+
+.performer p {
+    margin-top: 10px;
+}
+
+/* ABOUT PAGE __ ABTPG */
+
+.about {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.about {
+    flex: 1;
+}
+
+.show__title {
+    font-size: 72px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.show__subtitle {
+    font-size: 48px;
+}
+
+.show__subtitle + p {
+    font-size: 24px;
+	margin-top: 40px;
+}
+
+.show__title + p {
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+.map-content {
+	margin-top: 60px;
+}
+
+.overview-about {
+	margin-bottom: 40px;
+}
+
+.about__place-time {
+	display: inline-block;
+	padding-bottom: 10px;
+	border-bottom: 3px solid #000;
+}
+
+/* MEDIA PAGE __ MDAPG*/
+
+.gallery > figure {
+    flex: 1 0 25%;
+    min-width: 200px;
+}
+
+.gallery > figure:nth-last-child(2):nth-child(4n) {
+    min-width: 33%;
+}
+
+.media-tags {
+    margin-top: 20px;
+}
+
+.media-tags a {
+    padding: 0.5em 1em;
+    background: #ddd;
+    margin: 0 4px;
+}
+
+/* PROGRAM PAGE __ PRGPG */
+
+.svg-icon {
+	width: 24px;
+}
+
+.program-type {
+	justify-content: center;
+	align-content: center;
+}
+
+.program__image {
+	padding: 20px;
+}
+
+.program {
+	margin-bottom: 40px;
+	padding-bottom: 10px;
+	border-bottom: 5px solid #ddd;
+}
+
+/*
+.program__instruments {
+	position: absolute;
+	top: 20px;
+	right: 0;
+}
+*/
+
+.program__genre {
+ 	padding-bottom: 10px;
+	border-bottom: 1px dashed #bbb;
+}
+
+/* ==========================================================================
+   Helper classes _ HLP
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+	text-align: right;	
+}
+
+.vs-dark.vs-dark {
+  color: #FAF8F8;
+}
+
+.vs-light.vs-light {
+  color: #4B3D3D;
+}
+
+.list-reset {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list-reset a:hover, .link-reset:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.zero-margin--top {
+  margin-top: 0;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex--column {
+  display: flex;
+  flex-flow: column;
+}
+
+.flex--center-column {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex--center {
+  justify-content: center;
+}
+
+.flex--around {
+  justify-content: space-around;
+}
+
+.flex-item--pull-right {
+  margin-left: auto;
+}
+
+.flex-item--pull-up {
+  margin-bottom: auto;
+}
+
+.flex-item--pull-down {
+  margin-top: auto;
+}
+
+.flex-item--pull-left {
+  margin-right: auto;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+/* Iphone 4 ~~~~ */
+@media only screen and (max-width: 20em) {
+
+}
+
+/* Iphone 5 ~~~~ */
+
+@media only screen and (max-width: 24em) {
+    .hero {
+        font-size: 16px;
+        overflow: hidden;
+    }
+	
+	.section-intro {
+		font-size: 32px;
+		text-align: center;
+	}
+
+    .site-anchors {
+        font-size: 16px;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+
+	
+	.intro__last-year {
+		margin-top: 40px;
+	}
+	
+	.ticket {
+		padding-bottom: 40px;
+	}
+	
+	.ticket-price {
+		bottom: 0;
+		top: auto;
+	}
+	
+	.home .gallery {
+		margin-top: 20px;
+	}
+
+	.media__links > li {
+		margin-top: 40px;
+	}
+}
+
+/* Tablet ~~~~ 600px - 800px */
+
+@media only screen and (max-width: 37.5em) {
+	.navbar-inverse .navbar-collapse {
+		border-color: #848484;
+	}
+
+	.navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-nav > li > a {
+		margin: 0;
+		padding: 0 15px;
+		background-color: #3d3d3d;
+	}
+
+	.navbar-nav {
+		margin: 0 -15px;
+	}
+
+	.jumbotron {
+		height: auto;
+	}
+
+	.hero__links {
+		align-self: initial;
+		margin: 80px 0;
+	}
+
+	.hero__footer {
+		align-self: initial;
+	}
+
+	.ticket {
+    	margin: 40px auto;
+    }
+
+    .transition__content p {
+    	font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 50em) {
+	.home__tickets .row {
+		flex-direction: column;
+	}
+
+	.ticket {
+		width;
+		margin: 0px auto;
+		margin-bottom: 40px;
+	}
+
+	.ticket__link {
+		bottom: 60px;
+	}
+
+	.jumbotron .hero__intro {
+    	font-size: 40px;
+    	padding: 0 15px;
+    }
+
+    .hero__footer {
+    	padding: 20px 0;
+    }
+
+    .hero__footer .footer_info {
+    	margin-bottom: 20px;
+    }
+
+    .hero__footer .footer_info > p:first-child {
+    	display: block;
+    }
+
+	.navbar-brand.navbar-brand {
+		padding-left: 15px;
+	}
+
+	.scroll-trigger {
+		display: none;
+	}
+	
+    .gallery figure {
+        flex-basis: 25%;
+    }
+
+    .gallery figure img {
+        width: 100%;
+        height: auto;
+        object-fit: fill;
+    }
+
+    .gallery figure h3 {
+        font-size: 14px;
+    }
+
+    .show__title {
+        font-size: 64px;
+    }
+
+    .show__subtitle {
+        font-size: 36px;
+    }
+
+    .show__title + p, .show__subtitle + p {
+        font-size: 20px;
+    }
+
+    .site > section:not(:first-of-type) {
+    margin-top: 40px;
+	margin-bottom: 40px;
+	}
+
+	.intro__content > .heading {
+    	margin: 20px 0;
+    }
+}
+
+@media only screen and (max-width: 64em) {
+	.site-anchors li {
+		flex-basis: 40%;
+		margin: 10px 10px 0;
+	}
+
+	.site-anchors a {
+		width: 100%;
+		display: block;
+	}	
+	
+    .news-news-post header {
+        margin-top: 20px;
+    }
+
+    .news-title {
+        margin-bottom: 10px;
+        flex-basis: 100%;
+    }
+
+    .news-metadata {
+        flex-basis: 100%;
+    }
+
+    .news .side-content {
+        max-width: 100%;
+    }
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: none;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

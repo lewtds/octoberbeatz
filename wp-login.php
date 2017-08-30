@@ -9,7 +9,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>October #Beatz 2016 &lsaquo; Log In</title>
 	<link rel='dns-prefetch' href='http://s.w.org/' />
-<link rel='stylesheet' href='wp-admin/load-styles.php?c=0&amp;dir=ltr&amp;load%255B%255D=dashicons,buttons,forms,l10n,login&amp;ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' href='wp-admin/load-styles.php@c=0&amp;dir=ltr&amp;load%255B%255D=dashicons,buttons,forms,l10n,login&amp;ver=4.6.1' type='text/css' media='all' />
 <meta name='robots' content='noindex,follow' />
 	</head>
 	<body class="login login-action-login wp-core-ui  locale-en-us">
@@ -34,7 +34,7 @@
 </form>
 
 <p id="nav">
-	<a href="wp-login.php?action=lostpassword">Lost your password?</a>
+	<a href="wp-login.php@action=lostpassword">Lost your password?</a>
 </p>
 
 <script type="text/javascript">

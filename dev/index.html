@@ -4,9 +4,12 @@
 	<meta charset="UTF-8">
 
 	<title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,400i,700" rel="stylesheet">
-	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+<!-- 	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+ -->
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
 	<style>
 		html {
@@ -26,7 +29,7 @@
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: center;
-			height: 100vh;
+			/*height: 100vh;*/
 			color: white;
 			box-sizing: border-box;
 		}
@@ -40,35 +43,44 @@
 
 		.hero .present {
 			text-align: center;
-			margin-top: 10em;
+			margin-top: 2em;
 		}
 
 		.hero .punch {
 			text-align: center;
-			margin-bottom: 10em;
+			margin-bottom: 2em;
 		}
 
-		.hero .extra {
+/*		.hero .extra {
 			position: relative;
-		}
+		}*/
 
-		.hero .extra .media {
+/*		.hero .extra .media {
 			position: absolute;
 			left: 0;
 			bottom: 0;
 		}
+*/
+		.hero .extra > * {
+			margin-bottom: 1em;
+		}
+
+		.hero .extra .media {
+			display: flex;
+			justify-content: space-around;
+		}
 
 		.hero .extra .media img {
 			margin-right: 2em;
-			height: 24px;
+			height: 2em;
 		}
 
 		.hero .extra .buy-ticket {
-			position: absolute;
+			/*position: absolute;*/
 			bottom: 0;
-			width: 16em;
-			left: 50%;
-			margin-left: -8em;
+			/*width: 16em;*/
+			/*left: 50%;*/
+			/*margin-left: -8em;*/
 
 			color: white;
 			background: none;
@@ -82,10 +94,12 @@
 		}
 
 		.hero .extra .where-when {
-			position: absolute;
+			font-size: 120%;
+			text-align: center;
+/*			position: absolute;
 			bottom: 0;
 			right: 0;
-		}
+*/		}
 
 		.punch .cube span {
 			position: relative;
@@ -144,7 +158,7 @@
 	</style>
 </head>
 <body>
-	<nav>
+	<nav class="d-none">
 		<div>STORY</div>
 		<div>SMOKEBOMB</div>
 		<div><img src="img/cube.png" alt="" class="logo"></div>
@@ -180,26 +194,27 @@
 				<span>RUBIK'S CUBE</span></div>
 			</div>
 
+			<hr>
+
 			<div class="extra">
+				<div class="where-when">
+					<div style="font-weight: 700;">GLORIA STAGE</div>
+					<div style="font-style: italic;">Pieni Roobertinkatu 12, Helsinki</div>
+					<div style="font-weight: 700;">October 7th, 2017</div>
+				</div>
+				
+				<a href="#buy-ticket" class="buy-ticket btn btn-block">BUY TICKETS</a>
+
 				<div class="media">
 					<a href=""><img src="img/facebook.png" alt=""></a>
 					<a href=""><img src="img/youtube.png" alt=""></a>
 					<a href=""><img src="img/insta.png" alt=""></a>
 				</div>
-
-					<a href="#buy-ticket" class="buy-ticket pure-button">BUY TICKETS</a>
-				
-				<div class="where-when"
-					style="text-align: right; font-size: 120%;">
-					<div style="font-weight: 700;">GLORIA STAGE</div>
-					<div style="font-style: italic;">Pieni Roobertinkatu 12, Helsinki</div>
-					<div style="font-weight: 700;">October 7th, 2017</div>
-				</div>
 			</div>
 		</div>
 	</section>
 
-	<section id="buy-ticket">
+	<section id="buy-ticket" class="container">
 		<!-- Ticket Tailor Widget. Paste this in to your website where you want the widget to appear. Do no change the code or the widget may not work properly. -->
 		<div class="tt-widget"><div class="tt-widget-fallback"><p><a href="https://www.tickettailor.com/new-order/112715/8757/ref/website_widget/" target="_blank">Click here to buy tickets</a><br /><small><a href="http://www.tickettailor.com?rf=wdg" class="tt-widget-powered">Sell tickets online with Ticket Tailor</a></small></p></div><script src="https://dc161a0a89fedd6639c9-03787a0970cd749432e2a6d3b34c55df.ssl.cf3.rackcdn.com/tt-widget.js" data-url="https://www.tickettailor.com/new-order/112715/8757/ref/website_widget/" data-type="inline" data-inline-minimal="true" data-inline-show-logo="false" data-inline-bg-fill="false"></script></div>
 		<!-- End of Ticket Tailor Widget -->

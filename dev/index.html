@@ -185,7 +185,7 @@
 					<a href=""><img src="img/insta.png" alt=""></a>
 				</div>
 
-					<a href="" class="buy-ticket pure-button">BUY TICKETS</a>
+					<a href="#buy-ticket" class="buy-ticket pure-button">BUY TICKETS</a>
 				
 				<div class="where-when"
 					style="text-align: right; font-size: 120%;">
@@ -196,5 +196,51 @@
 			</div>
 		</div>
 	</section>
+
+	<section id="buy-ticket">
+		<!-- Ticket Tailor Widget. Paste this in to your website where you want the widget to appear. Do no change the code or the widget may not work properly. -->
+		<div class="tt-widget"><div class="tt-widget-fallback"><p><a href="https://www.tickettailor.com/new-order/112715/8757/ref/website_widget/" target="_blank">Click here to buy tickets</a><br /><small><a href="http://www.tickettailor.com?rf=wdg" class="tt-widget-powered">Sell tickets online with Ticket Tailor</a></small></p></div><script src="https://dc161a0a89fedd6639c9-03787a0970cd749432e2a6d3b34c55df.ssl.cf3.rackcdn.com/tt-widget.js" data-url="https://www.tickettailor.com/new-order/112715/8757/ref/website_widget/" data-type="inline" data-inline-minimal="true" data-inline-show-logo="false" data-inline-bg-fill="false"></script></div>
+		<!-- End of Ticket Tailor Widget -->
+	</section>
+
+	<script src="lib/jquery-3.2.1.min.js"></script>
+	<script>
+		// Select all links with hashes
+		$('a[href*="#"]')
+		  // Remove links that don't actually link to anything
+		  .not('[href="#"]')
+		  .not('[href="#0"]')
+		  .click(function(event) {
+		    // On-page links
+		    if (
+		      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+		      && 
+		      location.hostname == this.hostname
+		    ) {
+		      // Figure out element to scroll to
+		      var target = $(this.hash);
+		      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+		      // Does a scroll target exist?
+		      if (target.length) {
+		        // Only prevent default if animation is actually gonna happen
+		        event.preventDefault();
+		        $('html, body').animate({
+		          scrollTop: target.offset().top
+		        }, 1000, function() {
+		          // Callback after animation
+		          // Must change focus!
+		          var $target = $(target);
+		          $target.focus();
+		          if ($target.is(":focus")) { // Checking if the target was focused
+		            return false;
+		          } else {
+		            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+		            $target.focus(); // Set focus again
+		          };
+		        });
+		      }
+		    }
+		  });
+	</script>
 </body>
 </html>

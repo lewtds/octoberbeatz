@@ -38,7 +38,7 @@
 			height: 100%;
 			display: flex;
 			flex-direction: column;
-			justify-content: space-around;
+			justify-content: space-between;
 		}
 
 		.hero .present {
@@ -51,16 +51,7 @@
 			margin-bottom: 2em;
 		}
 
-/*		.hero .extra {
-			position: relative;
-		}*/
 
-/*		.hero .extra .media {
-			position: absolute;
-			left: 0;
-			bottom: 0;
-		}
-*/
 		.hero .extra > * {
 			margin-bottom: 1em;
 		}
@@ -177,10 +168,28 @@
 			padding-top: 2em;
 			padding-bottom: 2em;
 		}
+
+		@media (min-width: 768px) {
+			.hero {
+				height: 100vh;
+				padding-top: 10em;
+			}
+
+			.hero .extra {
+				position: relative;
+			}
+
+/*			.hero .extra .media {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}*/
+			
+		}
 	</style>
 </head>
 <body>
-	<nav class="d-none">
+	<nav class="">
 		<div>STORY</div>
 		<div>SMOKEBOMB</div>
 		<div><img src="img/cube.png" alt="" class="logo"></div>
@@ -237,16 +246,21 @@
 	</section>
 
 	<section id="about" class="container">
-		<h2>October #Beatz</h2>
+		<div class="row">
+			<div class="col-md-8">
+				
+				<h4>An Annual concert of MFF</h4>
+				<p>The first #Beatz in 2014 was held with the purpose of creating a memorable milestones in 2-year development of Music For Friends. It represented the enthusiasm and hard works of all team members throughout the year. </p>
+				
+				<p>#Beatz14 has received tons of love and encouragement from audience; therefore, we decided to turn it into an annual concert where people could freely showcase their talent, follow passion and develop professional skills. </p>
+				
+				<p>“I was amazed by how creative the show was. While I fell in love with romantic part in the beginning, I was thrilled by the later part, when everyone stood up, danced and screamed with excitement, especially with the dance performance and the rock band in the end. Everyone was on fire!!!” - Thai Nguyen, an audience of October #Beatz15</p>
+			</div>
 
-		<h4>An Annual concert of MFF</h4>
-		<p>The first #Beatz in 2014 was held with the purpose of creating a memorable milestones in 2-year development of Music For Friends. It represented the enthusiasm and hard works of all team members throughout the year. </p>
-
-		<p>#Beatz14 has received tons of love and encouragement from audience; therefore, we decided to turn it into an annual concert where people could freely showcase their talent, follow passion and develop professional skills. </p>
-
-		<p>“I was amazed by how creative the show was. While I fell in love with romantic part in the beginning, I was thrilled by the later part, when everyone stood up, danced and screamed with excitement, especially with the dance performance and the rock band in the end. Everyone was on fire!!!” - Thai Nguyen, an audience of October #Beatz15</p>
-
-		<img src="img/Story_NewDawn.png" alt="" class="img-fluid">
+			<div class="col-md-4">
+				<img src="img/Story_NewDawn.png" alt="" class="img-fluid">
+			</div>
+		</div>
 	</section>
 	<hr>
 	<section id="buy-ticket" class="container">
@@ -296,8 +310,10 @@
 		<p>Please don’t hesitate to contact us via <a href="https://www.facebook.com/events/1879236448992828/">Facebook</a> and/or email: <a href="mailto:contact@octoberbeatz.com">contact@octoberbeatz.com</a></p>
 	</section>
 
-	<footer class="container">
-		© 2017 Music For Friends Helsinki.
+	<footer>
+		<div class="container">
+			© 2017 Music For Friends Helsinki.
+		</div>
 	</footer>
 
 	<script src="lib/jquery-3.2.1.min.js"></script>

@@ -32,6 +32,7 @@
 			/*height: 100vh;*/
 			color: white;
 			box-sizing: border-box;
+			padding-top: 2em;
 		}
 
 		.hero .container {
@@ -44,11 +45,16 @@
 		.hero .present {
 			text-align: center;
 			margin-top: 2em;
+			font-size: 150%; 
+			margin-bottom: 1em;
 		}
 
+/*		.hero .present {}
+*/
 		.hero .punch {
 			text-align: center;
-			margin-bottom: 2em;
+			/*margin-bottom: 2em;*/
+			font-size: 180%;
 		}
 
 
@@ -92,6 +98,12 @@
 			right: 0;
 */		}
 
+		.punch .beatz {
+			font-weight: 700;
+			letter-spacing: 0.05em;
+			font-size: 200%;
+		}
+
 		.punch .cube span {
 			position: relative;
 		}
@@ -118,6 +130,20 @@
 		}
 
 		nav {
+			background-color: rgba(0, 0, 0, 0.7);
+			color: white;
+		}
+
+		.navbar-dark .navbar-nav .nav-link {
+			font-weight: 300;
+			letter-spacing: 0.6em;
+			color: white;
+			padding-left: 1em;
+			padding-right: 1em;
+			text-align: center; 
+		}
+/*
+		nav {
 			position: fixed;
 			color: white;
 			text-align: center;
@@ -135,19 +161,19 @@
 			display: inline-block;
 			padding-right: 1em;
 			padding-left: 1em;
-			/*border-right: 3px solid white;*/
 		}
 
 		nav > div:last-child {
 			border: none;
 		}
 
+*/
 		nav .logo {
 			height: 50px;
 			vertical-align: middle;
 		}
 
-		#about {
+		#story {
 			padding-top: 2em;
 			padding-bottom: 2em;
 		}
@@ -189,12 +215,29 @@
 	</style>
 </head>
 <body>
-	<nav class="">
-		<div>STORY</div>
-		<div>SMOKEBOMB</div>
-		<div><img src="img/cube.png" alt="" class="logo"></div>
-		<div>GALLERY</div>
-		<div>CONTACT</div>
+	<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+		<div class="container">
+			
+			<a href="" class="navbar-brand"><img src="img/cube.png" alt="" class="logo"></a>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+			   <span class="navbar-toggler-icon"></span>
+			 </button>
+
+			<div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo01">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a href="#story" class="nav-link">STORY</a>
+					</li>
+					<li class="nav-item">
+						<a href="" class="nav-link">SMOKEBOMB</a>
+					</li>
+
+					<li><a href="" class="nav-link">GALLERY</a></li>
+					<li><a href="" class="nav-link">CONTACT</a></li>
+				</ul>
+			</div>
+		</div>
 	</nav>
 
 	<section class="hero">
@@ -202,25 +245,19 @@
 			<div class="present">
 				<div style="
 					font-weight: 700;
-					font-size: 180%;
 					letter-spacing: 0.1em;">
 				MUSIC FOR FRIENDS</div>
 				<div style="
-					font-weight: 100;
-					font-size: 180%;">
+					font-weight: 100;">
 				presents</div>
 			</div>
 
 			<div class="punch">
-				<div style="
-					font-weight: 700;
-					font-size: 400%;
-					letter-spacing: 0.05em;">
+				<div class="beatz">
 				OCTOBER #BEATZ 2017</div>
 
 				<div class="cube" style="
 					font-family: Georgia, serif;
-					font-size: 300%;
 					letter-spacing: 0.15em;">
 				<span>RUBIK'S CUBE</span></div>
 			</div>
@@ -245,7 +282,7 @@
 		</div>
 	</section>
 
-	<section id="about" class="container">
+	<section id="story" class="container">
 		<div class="row">
 			<div class="col-md-8">
 				
@@ -317,6 +354,9 @@
 	</footer>
 
 	<script src="lib/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
 	<script>
 		// Select all links with hashes
 		$('a[href*="#"]')
